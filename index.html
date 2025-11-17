@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><script type='text/javascript' src='https://ppl-ai-code-interpreter-files.s3.amazonaws.com/CMejeqWP_XPL2i4tWOUK7Tg4lXuiXiialFplML59J8i5cdTwvVquIefPIJ6Klbqd3kstHQ-Nuf7OHA2PAUXjM4XZ3ZKcHkJ4Ssx5bFXBOsTz2IUTs6J693VfRATJDEnNVfhbVcqyBO0_-diOLOfVvODc_qPrqbGAV0TlNefO55w='></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaen Technologies - Dental Sales Intelligence Made Simple</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif;
+            color: #1f2937;
+            background: #ffffff;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Navigation */
+        nav {
+            background: #ffffff;
+            padding: 20px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 24px;
+            font-weight: 700;
+            color: #2563eb;
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: #2563eb;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+            font-weight: 700;
+        }
+
+        .tagline {
+            font-size: 14px;
+            color: #6b7280;
+            font-weight: 400;
+        }
+
+        .btn {
+            padding: 12px 28px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: #2563eb;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #1d4ed8;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+        }
+
+        .btn-secondary {
+            background: white;
+            color: #2563eb;
+            border: 2px solid #2563eb;
+        }
+
+        .btn-secondary:hover {
+            background: #eff6ff;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 80px 0;
+            text-align: center;
+            background: #ffffff;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            font-weight: 800;
+            color: #111827;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 22px;
+            color: #4b5563;
+            margin-bottom: 40px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-group {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* Section Styles */
+        .section {
+            padding: 80px 0;
+        }
+
+        .section-alt {
+            background: #f9fafb;
+        }
+
+        .section-title {
+            font-size: 36px;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 16px;
+            color: #111827;
+        }
+
+        .section-subtitle {
+            font-size: 18px;
+            text-align: center;
+            color: #6b7280;
+            margin-bottom: 60px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Problem Cards */
+        .problems-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 24px;
+            margin-top: 40px;
+        }
+
+        .problem-card {
+            background: white;
+            padding: 32px;
+            border-radius: 12px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+
+        .problem-card:hover {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            transform: translateY(-4px);
+        }
+
+        .problem-icon {
+            font-size: 48px;
+            margin-bottom: 16px;
+        }
+
+        .problem-card h3 {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: #111827;
+        }
+
+        .problem-card p {
+            color: #6b7280;
+            font-size: 16px;
+        }
+
+        /* Solution Steps */
+        .steps-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 32px;
+            margin-top: 40px;
+        }
+
+        .step-card {
+            background: white;
+            padding: 32px;
+            border-radius: 12px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            position: relative;
+        }
+
+        .step-number {
+            width: 48px;
+            height: 48px;
+            background: #2563eb;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .step-card h3 {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: #111827;
+        }
+
+        .step-card p {
+            color: #6b7280;
+            font-size: 16px;
+        }
+
+        /* Results Grid */
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 32px;
+            margin-top: 40px;
+        }
+
+        .result-card {
+            background: white;
+            padding: 32px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        .result-metric {
+            font-size: 48px;
+            font-weight: 800;
+            color: #2563eb;
+            margin-bottom: 12px;
+        }
+
+        .result-label {
+            font-size: 18px;
+            font-weight: 600;
+            color: #111827;
+            margin-bottom: 8px;
+        }
+
+        .result-context {
+            font-size: 14px;
+            color: #6b7280;
+        }
+
+        /* Case Study */
+        .case-study {
+            background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+            color: white;
+            padding: 60px 40px;
+            border-radius: 16px;
+            text-align: center;
+            margin-top: 60px;
+            box-shadow: 0 8px 24px rgba(37, 99, 235, 0.2);
+        }
+
+        .case-study-highlight {
+            font-size: 56px;
+            font-weight: 800;
+            margin-bottom: 16px;
+        }
+
+        .case-study p {
+            font-size: 20px;
+            opacity: 0.95;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Personas */
+        .personas-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+            margin-top: 40px;
+        }
+
+        .persona-card {
+            background: white;
+            padding: 32px;
+            border-radius: 12px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            border-left: 4px solid #2563eb;
+        }
+
+        .persona-card h3 {
+            font-size: 22px;
+            font-weight: 600;
+            color: #111827;
+            margin-bottom: 12px;
+        }
+
+        .persona-card p {
+            color: #6b7280;
+            font-size: 16px;
+        }
+
+        /* Pricing */
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 32px;
+            margin-top: 40px;
+        }
+
+        .pricing-card {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            border: 2px solid #e5e7eb;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .pricing-card:hover {
+            box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+            transform: translateY(-4px);
+        }
+
+        .pricing-card.popular {
+            border-color: #2563eb;
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+        }
+
+        .popular-badge {
+            position: absolute;
+            top: -12px;
+            right: 20px;
+            background: #2563eb;
+            color: white;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .pricing-card h3 {
+            font-size: 24px;
+            font-weight: 600;
+            color: #111827;
+            margin-bottom: 12px;
+        }
+
+        .pricing-price {
+            font-size: 40px;
+            font-weight: 800;
+            color: #2563eb;
+            margin-bottom: 4px;
+        }
+
+        .pricing-period {
+            font-size: 14px;
+            color: #6b7280;
+            margin-bottom: 24px;
+        }
+
+        .pricing-features {
+            list-style: none;
+            margin-bottom: 32px;
+        }
+
+        .pricing-features li {
+            padding: 12px 0;
+            color: #4b5563;
+            font-size: 15px;
+            border-bottom: 1px solid #f3f4f6;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .pricing-features li:before {
+            content: "✓";
+            color: #2563eb;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        /* Security Features */
+        .security-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 24px;
+            margin-top: 40px;
+        }
+
+        .security-card {
+            background: white;
+            padding: 24px;
+            border-radius: 12px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .security-icon {
+            font-size: 40px;
+            margin-bottom: 12px;
+        }
+
+        .security-card h4 {
+            font-size: 18px;
+            font-weight: 600;
+            color: #111827;
+            margin-bottom: 8px;
+        }
+
+        .security-card p {
+            font-size: 14px;
+            color: #6b7280;
+        }
+
+        /* FAQ */
+        .faq-container {
+            max-width: 800px;
+            margin: 40px auto 0;
+        }
+
+        .faq-item {
+            background: white;
+            padding: 24px;
+            border-radius: 12px;
+            margin-bottom: 16px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .faq-item:hover {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .faq-question {
+            font-size: 18px;
+            font-weight: 600;
+            color: #111827;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-toggle {
+            font-size: 24px;
+            color: #2563eb;
+            transition: transform 0.3s ease;
+        }
+
+        .faq-answer {
+            color: #6b7280;
+            font-size: 16px;
+            margin-top: 12px;
+            display: none;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-item.active .faq-toggle {
+            transform: rotate(45deg);
+        }
+
+        /* Final CTA */
+        .final-cta {
+            text-align: center;
+            padding: 80px 20px;
+            background: #f9fafb;
+        }
+
+        .final-cta h2 {
+            font-size: 42px;
+            font-weight: 700;
+            color: #111827;
+            margin-bottom: 20px;
+        }
+
+        .final-cta p {
+            font-size: 20px;
+            color: #6b7280;
+            margin-bottom: 40px;
+        }
+
+        /* Footer */
+        footer {
+            background: #111827;
+            color: #9ca3af;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        footer p {
+            margin-bottom: 8px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .hero p {
+                font-size: 18px;
+            }
+
+            .section-title {
+                font-size: 28px;
+            }
+
+            .cta-group {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+            }
+
+            .nav-content {
+                flex-direction: column;
+                gap: 16px;
+            }
+
+            .pricing-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <div class="nav-content">
+                <div>
+                    <div class="logo">
+                        <div class="logo-icon">GT</div>
+                        <div>
+                            <div>Gaen Technologies</div>
+                            <div class="tagline">Dental Sales Intelligence Made Simple</div>
+                        </div>
+                    </div>
+                </div>
+                <a href="#pricing" class="btn btn-primary">Get Started</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Transform Dental Practice Research Into<br>Revenue-Generating Intelligence</h1>
+            <p>Turn any practice website into source-linked, ROI-backed intelligence reports in under 60 seconds</p>
+            <div class="cta-group">
+                <a href="#pricing" class="btn btn-primary">Request Free Sample</a>
+                <a href="#how-it-works" class="btn btn-secondary">See How It Works</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">The Challenge Every Dental Sales Rep Faces</h2>
+            <p class="section-subtitle">Manual research is killing your productivity and limiting your deal flow</p>
+            
+            <div class="problems-grid">
+                <div class="problem-card">
+                    <div class="problem-icon">⏰</div>
+                    <h3>20+ Hours Weekly Research</h3>
+                    <p>Spending valuable time manually researching practices and competitors</p>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-icon">💬</div>
+                    <h3>Generic Pitches</h3>
+                    <p>One-size-fits-all approaches that don't address specific practice needs</p>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-icon">📉</div>
+                    <h3>No ROI Proof</h3>
+                    <p>Losing deals because you can't demonstrate value upfront</p>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-icon">❓</div>
+                    <h3>Missing Intelligence</h3>
+                    <p>Don't know what equipment or systems practices already have</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="section" id="how-it-works">
+        <div class="container">
+            <h2 class="section-title">How It Works</h2>
+            <p class="section-subtitle">From practice URL to actionable intelligence in 4 simple steps</p>
+            
+            <div class="steps-container">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <h3>Submit Practice URLs</h3>
+                    <p>Send us target practice websites or territory criteria. Works with any dental practice.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <h3>AI-Powered Analysis</h3>
+                    <p>Our AI examines websites, services, equipment, reviews, and credentials in under 60 seconds.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <h3>Receive Intelligence Reports</h3>
+                    <p>Get comprehensive PDFs with ROI calculations, pain points, and sales talking points.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">4</div>
+                    <h3>Convert More Deals</h3>
+                    <p>Use data-backed insights to personalize outreach and close more sales.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Section -->
+    <section class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">Quantified Results That Matter</h2>
+            <p class="section-subtitle">Real metrics from sales reps using our platform</p>
+            
+            <div class="results-grid">
+                <div class="result-card">
+                    <div class="result-metric">3x</div>
+                    <div class="result-label">Meeting Booking Rate</div>
+                    <div class="result-context">Up from industry average</div>
+                </div>
+                <div class="result-card">
+                    <div class="result-metric">25-35%</div>
+                    <div class="result-label">Win Rate Increase</div>
+                    <div class="result-context">Through personalization</div>
+                </div>
+                <div class="result-card">
+                    <div class="result-metric">4-6</div>
+                    <div class="result-label">Month Sales Cycle</div>
+                    <div class="result-context">Down from 6-8 months</div>
+                </div>
+                <div class="result-card">
+                    <div class="result-metric">20+</div>
+                    <div class="result-label">Hours Saved Weekly</div>
+                    <div class="result-context">Reclaim your time</div>
+                </div>
+            </div>
+
+            <div class="case-study">
+                <div class="case-study-highlight">$100K-$180K</div>
+                <p>Revenue opportunity identified for a single Midwest practice lacking CBCT and guided surgery systems</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Personas Section -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Who This Platform Is Built For</h2>
+            <p class="section-subtitle">Trusted by dental sales professionals who value their time</p>
+            
+            <div class="personas-grid">
+                <div class="persona-card">
+                    <h3>Equipment Sales Reps</h3>
+                    <p>Selling dental equipment (lasers, CBCT, CAD/CAM) and need better qualification</p>
+                </div>
+                <div class="persona-card">
+                    <h3>Territory Managers</h3>
+                    <p>Managing multiple reps and need scalable research solutions</p>
+                </div>
+                <div class="persona-card">
+                    <h3>Consultants</h3>
+                    <p>Delivering practice analysis with data-backed recommendations</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Security Section -->
+    <section class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">Your Data, Your Control</h2>
+            <p class="section-subtitle">Enterprise-grade security and transparency built in</p>
+            
+            <div class="security-grid">
+                <div class="security-card">
+                    <div class="security-icon">🔒</div>
+                    <h4>Encrypted &amp; Protected</h4>
+                    <p>Your data stays encrypted in our secure enterprise environment</p>
+                </div>
+                <div class="security-card">
+                    <div class="security-icon">🚫</div>
+                    <h4>Never Shared or Sold</h4>
+                    <p>We never use your data for training or share it with competitors</p>
+                </div>
+                <div class="security-card">
+                    <div class="security-icon">👤</div>
+                    <h4>You Own Your Data</h4>
+                    <p>Full control over leads and reports. Export, delete, or archive anytime</p>
+                </div>
+                <div class="security-card">
+                    <div class="security-icon">✅</div>
+                    <h4>Source Verification</h4>
+                    <p>Every insight backed by verifiable sources for instant credibility</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="section" id="pricing">
+        <div class="container">
+            <h2 class="section-title">Choose Your Plan</h2>
+            <p class="section-subtitle">Flexible options to match your sales process and volume</p>
+            
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>Pay-Per-Report</h3>
+                    <div class="pricing-price">$49-199</div>
+                    <div class="pricing-period">Per practice analysis</div>
+                    <ul class="pricing-features">
+                        <li>One comprehensive report</li>
+                        <li>No commitment required</li>
+                        <li>Full ROI analysis included</li>
+                        <li>Source-linked insights</li>
+                        <li>PDF delivered in 60 seconds</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-secondary" style="width: 100%;">Get Started</a>
+                </div>
+                <div class="pricing-card">
+                    <h3>Monthly Subscription</h3>
+                    <div class="pricing-price">$99</div>
+                    <div class="pricing-period">Per month</div>
+                    <ul class="pricing-features">
+                        <li>2-4 qualified leads monthly</li>
+                        <li>Ongoing intelligence flow</li>
+                        <li>Priority support</li>
+                        <li>Cancel anytime</li>
+                        <li>Perfect for solo reps</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-secondary" style="width: 100%;">Subscribe Now</a>
+                </div>
+                <div class="pricing-card popular">
+                    <div class="popular-badge">Most Popular</div>
+                    <h3>14-Day Pilot Program</h3>
+                    <div class="pricing-price">$2,500</div>
+                    <div class="pricing-period">One-time pilot</div>
+                    <ul class="pricing-features">
+                        <li>20 custom practice reports</li>
+                        <li>Territory analysis included</li>
+                        <li>Dedicated support</li>
+                        <li>ROI-optimized for your product</li>
+                        <li>Prove value, then scale</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-primary" style="width: 100%;">Start Pilot</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <p class="section-subtitle">Everything you need to know about our platform</p>
+            
+            <div class="faq-container">
+                <div class="faq-item" onclick="toggleFAQ(this)">
+                    <div class="faq-question">
+                        <span>Who is this platform designed for?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        Independent dental equipment sales reps, territory managers, dental lab owners, and consultants who need fast, actionable intelligence to close more deals.
+                    </div>
+                </div>
+                <div class="faq-item" onclick="toggleFAQ(this)">
+                    <div class="faq-question">
+                        <span>How accurate is the information?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        We use publicly available data from practice websites, reviews, and online presence. Every claim is backed by verifiable sources you can check yourself.
+                    </div>
+                </div>
+                <div class="faq-item" onclick="toggleFAQ(this)">
+                    <div class="faq-question">
+                        <span>Can I customize the reports?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        Yes! You receive editable PDF reports that you can customize with your branding and additional notes. The data is yours to use however you need.
+                    </div>
+                </div>
+                <div class="faq-item" onclick="toggleFAQ(this)">
+                    <div class="faq-question">
+                        <span>Do you offer a free trial?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        Absolutely! Request a free sample report for one of your toughest prospects. See the quality firsthand before making any commitment.
+                    </div>
+                </div>
+                <div class="faq-item" onclick="toggleFAQ(this)">
+                    <div class="faq-question">
+                        <span>How quickly will I receive results?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        Single reports: 60 seconds. Pilot programs (20 reports): 24-48 hours. We prioritize speed without sacrificing quality.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta" id="contact">
+        <div class="container">
+            <h2>Ready to Transform Your Sales Process?</h2>
+            <p>Request a free sample report and see the difference intelligence makes</p>
+            <div class="cta-group">
+                <a href="mailto:sales@gaentech.com" class="btn btn-primary">Request Free Sample</a>
+                <a href="mailto:sales@gaentech.com" class="btn btn-secondary">Schedule a Demo</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Gaen Technologies. All rights reserved.</p>
+            <p>Dental Sales Intelligence Made Simple</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleFAQ(element) {
+            element.classList.toggle('active');
+        }
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
